@@ -1,0 +1,18 @@
+image: gitpod/workspace-full
+tasks:
+    - init: yarn install
+      command:  . ./gitpod-setup.sh && yarn start
+      name: Setup script
+ports:
+  - port: 8080
+    onOpen: open-browser
+github:
+  prebuilds:
+    master: true
+    branches: false
+    pullRequests: false
+    pullRequestsFromForks: false
+    addCheck: false
+    addComment: false
+    addBadge: false
+    addLabel: false

@@ -1,0 +1,45 @@
+{
+  "name": "todo-astra-jamstack-netlify",
+  "version": "1.0.0",
+  "main": "src/app.jsx",
+  "scripts": {
+    "build": "sed -i s/:ASTRA_DB_ID:/${ASTRA_DB_ID}/g netlify.toml && sed -i s/:ASTRA_DB_REGION:/${ASTRA_DB_REGION}/g netlify.toml && webpack",
+    "dev": "webpack-dev-server --mode development",
+    "start": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:phact/todo-astra-jamstack-netlify.git"
+  },
+  "author": "Gary Borton <gdborton@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phact/todo-astra-jamstack-netlify/issues"
+  },
+  "homepage": "https://github.com/phact/todo-astra-jamstack-netlify#readme",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "cross-fetch": "^3.0.5",
+    "ejs-webpack-loader": "^2.2.2",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "node-uuid": "^1.4.8",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-router": "^5.2.0",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "copy-webpack-plugin": "^6.0.3",
+    "image-webpack-loader": "^6.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
